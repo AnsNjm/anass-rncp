@@ -1,0 +1,7 @@
+<h1>Edit this movie</h1>
+<%= simple_form_for(@movie) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :review %>
+  <%= f.input :rating %>
+  <%= f.submit "Update", class: "btn btn-primary" %>
+<% end %>

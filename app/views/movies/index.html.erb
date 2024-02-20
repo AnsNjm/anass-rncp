@@ -1,0 +1,12 @@
+<h1>MOVIES</h1>
+<% @movies.each do |movie|%>
+  <h2><%= movie.name %></h2>
+  <p><%= movie.review %></p>
+  <p><%= movie.rating %></p>
+  <%= link_to "Update", edit_movie_path(movie)%>
+  <%= link_to "Delete",
+  movie_path(movie),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<% end %>
+<%= link_to "Add a new movie", new_movie_path, class: "btn btn-primary" %>
